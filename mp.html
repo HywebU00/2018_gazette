@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link type="image/ico" rel="icon" href="images/basic/favicon.png" /> 
+	<title>行政院公報資訊網</title> 
+	
+	<!-- Bootstrap CSS -->
+	<link href="css/theme.css" rel="stylesheet">
+	<!-- <link href="assets/module/bootstrap-3.3.2/theme.min.css" rel="stylesheet"> -->
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+	<!-- Add fancyBox main JS and CSS files -->
+	<!-- <script type="text/javascript" src="js/fancyBox/jquery.fancybox.js?v=2.1.5"></script>
+	<script type="text/javascript" src="js/fancyBox/fanctbox_set.js"></script>
+	<link rel="stylesheet" type="text/css" href="js/fancyBox/jquery.fancybox.css?v=2.1.5" media="screen" /> -->
+
+	<!-- slick 輪播-->
+	<link rel="stylesheet" href="assets/module/slick/slick.css">
+	<link rel="stylesheet" href="assets/module/slick/slick-theme.css">
+	<!-- slick 輪播自訂CSS -->
+	<!-- <link rel="stylesheet" href="css/slick-slide.css">		 -->
+	<!-- social-buttons -->
+	<link rel="stylesheet" href="assets/module/fontello/css/fontello.css">
+	<link rel="stylesheet" href="assets/module/fontello/css/animation.css">
+	<!-- 側邊欄收合-->
+	<link href="stylesheet" type="text/css" href="assets/css/bootstrap.offcanvas.css"/>
+	<!-- 自訂CSS -->
+	<link rel="stylesheet" href="css/layout.css">
+</head>
+<body>
+	<!-- 直接跳主內容區 -->
+    <a class="goCenter" href="#aC" tabindex="1">按 Enter 到主內容區</a>
+	<!-- <a href="#aC" id="gotocenter" title="跳到主要內容" tabindex="1" class="hidden-xs">跳到主要內容</a> -->
+	<!-- Header -->
+	<section id="Header" class="navbar-fixed-top">
+		<nav class="navbar megamenu set-relative" role="navigation">
+			<div class="accesskey hidden-xs"><a href="#" title="header" id="accesskeyU" accesskey="U">:::</a></div>
+			<div class="container">
+				<div class="row">
+					<!--手機收合選單-->
+					<div class="navbar-header set-relative">
+						<button type="button" class="navbar-toggle pull-left" data-toggle="collapse" data-target="#offcanvas-left">
+							<span class="sr-only">Toggle navigation</span><i class="icon-menu"></i>
+						</button>
+						<!--logo-->
+						<h1 class="Logo"><a href="#"><img src="images/basic/logo.png" alt="" class="img-responsive"></a></h1>
+						<button type="button" class="navbar-toggle pull-right" data-toggle="collapse" data-target="#offcanvas-right">
+							<span class="sr-only">Toggle navigation</span><i class="icon-down-open"></i>
+						</button> 
+					</div>
+					<!--其他選單 收合右側-->
+					<div class="collapse navbar-collapse set-relative" id="offcanvas-right" role="navigation">
+						<!--桌機、平板-->
+						<div class="hidden-xs">
+							<!--Links-->
+							<div class="Normal-Links">
+								<ul class="nav navbar-nav">
+									<li><a href="#" title="">回舊版</a></li>
+									<li><a href="#" title="">網站導覽</a></li>
+									<!--language-->
+									<li><a href="#" title="" class="Language">ENGLISH</a></li>
+									<!--會員專區-->
+									<li><a href="#" title="" class="Member">加入會員</a></li>
+									<li><a href="#" title="" class="Member">會員登入</a></li>
+								</ul> 
+							</div>
+						</div>
+						<!--手機版-->
+						<div>
+							<!--Search-->
+							<div class="Search visible-xs-block">
+								<div class="accesskey hidden-xs"><a href="#" accesskey="S" title="搜尋公報標題/公文字號/主旨/說明/關鍵詞/全文">:::</a></div>
+									<form class="navbar-form" role="search">       
+										<div class="input-group">
+											<input type="text" class="form-control" placeholder="搜尋公報標題/公文字號/主旨/說明/關鍵詞/全文">
+											<span class="input-group-btn">
+												<button type="button" class="btn">
+													<span class="icon-search-1"></span>
+												</button>
+											</span>
+										</div>
+									</form>
+								</div>
+							</div>
+							<!--Links-->
+							<div class="Normal-Links visible-xs-block">
+								<!--會員登入-->
+								<h3>會員登入</h3>
+								<ul>
+									<li><a href="#" title=""><b class="caret"></b>以MyEGOV帳號登入</a></li>
+									<li><a href="#" title=""><b class="caret"></b>以Facebook帳號登入</a></li>
+									<li><a href="#" title=""><b class="caret"></b>以Google帳號登入</a></li>
+								</ul>
+								<!--會員登入-->
+								<h3>會員專區</h3>
+								<ul>
+									<li><a href="#" title=""><b class="icon-angle-right"></b>我的關注</a></li>
+									<li><a href="#" title=""><b class="icon-angle-right"></b>我的書籤</a></li>
+									<li><a href="#" title=""><b class="icon-angle-right"></b>我的查詢歷史</a></li>
+									<li><a href="#" title=""><b class="icon-angle-right"></b>法規更新追蹤</a></li>
+									<li><a href="#" title=""><b class="icon-angle-right"></b>登出</a></li>
+								</ul>
+								<!--language-->
+								<a href="#" class="Language">ENGLISH</a>
+							</div>
+						</div>
+					</div>
+
+					<!--主選單  收合左側-->
+					<div class="collapse navbar-collapse" id="offcanvas-left" role="navigation">
+						<div class="MainMenu pull-lg-right pull-md-right">
+							<ul class="nav navbar-nav">
+								<li class="dropdown hidden-xs">
+									<a href="#" data-hover="dropdown" data-toggle="dropdown" class="active dropdown-toggle">關於公報<b class="caret"></b></a>
+									<ul class="dropdown-menu">
+										<li><a href="" title="">背景說明</a></li>
+										<li><a href="" title="">內容範圍</a></li>
+										<li><a href="" title="">作業規範</a></li>
+									</ul>
+								</li>
+								<li class="dropdown" id="Show_xs">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">公報瀏覽<b class="caret"></b></a>
+									<ul class="dropdown-menu">
+										<li>
+											<div class="megamenu-content">
+												<div class="row">
+													<ul class="col-sm-4 list-unstyled">
+														<li><a href="" title=""><strong>卷期瀏覽</strong></a></li>
+													</ul>
+													<ul class="col-sm-4 list-unstyled">
+														<li><a href="#" title=""><strong title="功能篇別瀏覽">功能篇別瀏覽</strong></a></li>
+														<ul>
+															<li><a href="#" title="">綜合行政篇</a></li>
+															<li><a href="#" title="">內政篇</a></li>
+															<li><a href="#" title="">外交國防法務篇</a></li>
+															<li><a href="#" title="">財政經濟篇</a></li>
+															<li><a href="#" title="">教育科技文化篇</a></li>
+															<li><a href="#" title="">交通建設篇</a></li>
+															<li><a href="#" title="">農業環保篇</a></li>
+															<li><a href="#" title="">衛生勞動篇</a></li>
+															<li><a href="#" title="">附錄</a></li>
+														</ul>
+													</ul>
+													<ul class="col-sm-4 list-unstyled hidden-xs">
+														<li><a href="#" title=""><strong title="類型瀏覽">類型瀏覽</a></strong></li>
+														<ul>
+															<li><a href="#" title="">行政規則</a></li>
+															<li><a href="#" title="">其他</a></li>
+															<li><a href="#" title="">轉載</a></li>
+															<li><a href="#" title="">特載</a></li>
+															<li><a href="#" title="">處分</a></li>
+															<li><a href="#" title="">法規</a></li>
+															<li><a href="#" title="">公告及送達</a></li>
+															<li><a href="#" title="">專載</a></li>
+														</ul>
+													</ul>
+													<ul class="col-sm-4 list-unstyled hidden-xs">
+														<li><a href="#" title=""><strong>主題瀏覽</strong></a></li>
+													</ul>
+													<ul class="col-sm-4 list-unstyled hidden-xs">
+														<li><a href="#" title=""><strong>施政瀏覽</strong></a></li>
+													</ul>
+													<ul class="col-sm-4 list-unstyled hidden-xs">
+														<li><a href="#" title=""><strong>服務瀏覽</strong></a></li>
+													</ul>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</li>
+								<li class="dropdown hidden-xs">
+									<a href="#" data-hover="dropdown" data-toggle="dropdown" class="dropdown-toggle">開放資料<b class="caret"></b></br><span>(OPEN DATA)</span></a>
+									<ul class="dropdown-menu">
+										<li><a href="" title="">使用說明</a></li>
+										<li><a href="" title="">最新下載</a></li>
+										<li><a href="" title="">本月瀏覽</a></li>
+										<li><a href="" title="">歷史資料</a></li>
+									</ul>
+								</li>
+								<li class="dropdown hidden-xs">
+									<a href="#" data-hover="dropdown" data-toggle="dropdown" class="dropdown-toggle">相關連結<b class="caret"></b></a>
+									<ul class="dropdown-menu">
+										<li><a href="" title="">國內公報</a></li>
+										<li><a href="" title="">國外公報</a></li>
+										<li><a href="" title="">其他網站</a></li>
+									</ul>
+								</li>
+								<li class="hidden-xs">
+									<a href="#" class="">常見問題</a>
+								</li>
+								<li class="dropdown hidden-xs">
+									<a href="#" data-hover="dropdown" data-toggle="dropdown" class="dropdown-toggle">下載專區<b class="caret"></b></a>
+									<ul class="dropdown-menu">
+										<li><a href="" title="">檔案下載</a></li>
+										<li><a href="" title="">連結圖檔下載</a></li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div> 
+			</div>
+		</nav> 
+	</section>
+	<!-- Content -->
+	<section id="MainContent">
+		<!-- Search -->
+		<section class="hidden-xs">
+			<div class="Block">
+				<div class="Search_Bar">
+					<div class="container">
+						<div class="row">
+							<div class="Search">
+								<div class="accesskey hidden-xs">
+									<a href="#" accesskey="S" title="搜尋公報標題/公文字號/主旨/說明/關鍵詞/全文">:::</a>
+								</div>
+								<div class="">
+									<form class="navbar-form" role="search">       
+										<div class="input-group col-md-9 col-sm-8">
+											<input type="text" class="form-control" placeholder="搜尋公報標題/公文字號/主旨/說明/關鍵詞/全文">
+											<span class="input-group-btn">
+												<button type="button" class="btn">
+													<span class="icon-search-1"></span>
+												</button>
+											</span>
+										</div>
+										<button type="button" class="btn BTN-Orange">進階搜尋</button>
+										<button type="button" class="btn BTN-Orange" title="總統府、五院及地方政府公報整合查詢">整合查詢</button>
+									</form>
+								</div>
+							</div>
+							<div class="HotKeywords">
+								熱門關鍵字：
+								<a href="#">公 告</a>
+								<a href="#">勞動部</a>
+								<a href="#">財政部</a>
+								<a href="#">法 規</a>
+								<a href="#">替代役</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- 主要內容區 -->
+		<a class="accesskey" href="#aC" id="aC" accesskey="C" title="主要內容區">:::</a>
+		<section class="Warn hidden-xs">
+			<h2>對於本網站提供之相關資訊，如有任何疑義，請逕向公（發）布機關洽詢。</h2>
+		</section>
+		<!-- 當前發行 -->
+		<section>
+			<div class="Block Latest_Issue">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-3 col-sm-12 col-xs-12 BTN">
+							<a href="#" title="">
+								<p class="Date">2016-06-30</p>
+								<h3>第<span>022</span>卷。第<span>156</span>期</h3>
+								<p>總發行<span>48</span>則</p>
+							</a>
+						</div>
+						<div class="col-md-7 col-sm-12 col-xs-12 Items">
+							<ul class="clearfix">
+								<li><span>30</span><a href="">法規</a></li>
+								<li><span>16</span><a href="">行政規則</a></li>
+								<li><span>80</span><a href="">公告及送達</a></li>
+								<li><span>3</span><a href="">處分</a></li>
+								<li><span>8</span><a href="">其他</a></li>
+								<li><span>90</span><a href="">特載</a></li>
+								<li><span>46</span><a href="">專載</a></li>
+								<li><span>3</span><a href="">轉載</a></li>
+							</ul>
+						</div>
+						<div class="col-md-2 col-sm-12 hidden-xs BTN text-center Go_List">
+							<a href="#" title=""><h3>本期瀏覽<i class="icon-right-open"Go_List></i></h3></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- Slider+草案預告 -->
+		<section>
+			<div class="Block">
+				<div class="container">
+					<div class="row">
+						<!-- Slider -->
+						<noscript>
+							<style>
+								.Multiple_slider .Items{display: none;}
+								.Multiple_slider .Items.Show{display: block;}
+								noscript a{ color:blue; text-decoration: underline; }
+								noscript a:hover,noscript a:focus{ color:red; text-decoration: none; }
+								noscript p{ text-align: center; }
+							</style>
+							<p>若您的瀏覽器無法支援請點選此<a href="#" title="首頁輪播區塊" alt="首頁輪播區塊">超連結</a></p>
+						</noscript>
+						<div class="col-md-8 col-sm-12 col-xs-12 Slider_Wrap">
+							<div class="Multiple_slider">
+								<div class="Items Show">
+									<img src="images/Multiple_slider/001.jpg" class="img-responsive">
+									<div class="Text">
+										<h3><a href="" title="">01行政院第3509次會議院長提示暨院會決定決議事項行政院第3509次會議院長</a></h3>
+										<p>教育部公告：委託國立臺北教育大學辦理「106年度高級中等以下學校及幼兒園教師資格</p>
+									</div>
+								</div>
+								<!-- -->
+								<div class="Items">
+									<img src="images/Multiple_slider/001.jpg" class="img-responsive">
+									<div class="Text">
+										<h3><a href="" title="">02行政院第3509次會議院長提示暨院會決定決議事項</a></h3>
+										<p>教育部公告：委託國立臺北教育大學辦理「106年度高級中等以下學校及幼兒園教師資格...</p>
+									</div>
+								</div>
+								<div class="Items">
+									<img src="images/Multiple_slider/001.jpg" class="img-responsive">
+									<div class="Text">
+										<h3><a href="" title="">03行政院第3509次會議院長提示暨院會決定決議事項</a></h3>
+										<p>教育部公告：委託國立臺北教育大學辦理「106年度高級中等以下學校及幼兒園教師資格...</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- 草案預告 -->
+						<div class="col-md-4 col-sm-12 col-xs-12 Preparatory">
+							<h2>草案預告</h2>
+							<div class="Wrap">
+								<h3>本月草案總數：<a href="#" title="">76</a>筆</h3>
+								<div class="Chapter">
+									<p><a href="#" title="">經濟部標準檢驗局公告：預告「膜式氣量計型式認證技術規範」修正草案</a></p>
+									<button type="button" class="btn BTN_Gray btn-xs">PDF</button>
+									<h5>表示意見截止時間：2016-08-22</h5>
+								</div>
+								<div class="Chapter">
+									<p><a href="#" title="">經濟部標準檢驗局公告：預告「膜式氣量計型式認證技術規範」修正草案</a></p>
+									<button type="button" class="btn BTN_Gray btn-xs">PDF</button>
+									<h5>表示意見截止時間：2016-08-22</h5>
+								</div>
+								<!-- <button type="button" class="btn btn-primary btn-block">更多內容</button> -->
+								<p><a href="#" title="" class="More">更多內容</a></p>
+							</div>
+							<div class="Join-Talk">
+								<button type="button" class="btn btn-block BTN-Customize">草案預告同步刊登 join 平臺「眾開講」徵集民眾意見</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Tab+List-->
+			<div class="Block" style="background: #dfeaf6;">
+				<div class="container">
+					<div class="row">
+						<!-- Tab -->
+						<div class="col-md-8 col-sm-12 col-xs-12 Tab">
+							<h2>本期發行公報</h2>
+							<div class="all">
+								<ul class="options">
+									<li class="here">
+										<a href="#" title="綜合行政篇" class="Icons Icon-01"><span></span></a>
+										<div class="contents">
+											<div class="inner">
+												<h3>綜合行政篇</h3>
+												<p><a href="" title="">經濟部令：修正「非都市土地申請變更編定為礦業用地興辦事業計畫審查作業要點」，自即日生效</a></p>
+												<span>2016/06/20   經務字 第 10504603740 號</span>
+											</div>
+											<div class="Issued"><span>9</span><a href="#">本期發行</a></div>
+										</div>
+									</li>
+									<li class="">
+										<a href="#" title="內政篇" class="Icons Icon-02"></a>
+										<div class="contents">
+											<div class="inner">
+												<h3>內政篇</h3>
+												<p><a href="" title="">經濟部令：修正「非都市土地申請變更編定為礦業用地興辦事業計畫審查作業要點」，自即日生效經濟部令：修正「非都市土地申請變更編定為礦業用地興辦事業計畫審查作業要點」，自即日生效</a></p>
+												<span>2016/06/20   經務字 第 10504603740 號</span>
+											</div>
+											<div class="Issued"><span>9</span><a href="#">本期發行</a></div>
+										</div>
+									</li>
+									<li class="">
+										<a href="#" title="外交國防法務篇" class="Icons Icon-03 No_data"></a>
+										<div class="contents">
+											<div class="inner">
+												<h3>外交國防法務篇</h3>
+												<p>目前無資料</p>
+												<!--<p><a href="" title="">經濟部令：修正「非都市土地申請變更編定為礦業用地興辦事業計畫審查作業要點」，自即日生效</a></p>
+												<span>2016/06/20   經務字 第 10504603740 號</span>-->
+											</div>
+											<div class="Issued"><span>9</span><a href="#">本期發行</a></div>
+										</div>
+									</li>
+									<li class="">
+										<a href="#" title="財政經濟篇" class="Icons Icon-04"></a>
+										<div class="contents">
+											<div class="inner">
+												<h3>財政經濟篇</h3>
+												<p><a href="" title="">經濟部令：修正「非都市土地申請變更編定為礦業用地興辦事業計畫審查作業要點」，自即日生效</a></p>
+												<span>2016/06/20   經務字 第 10504603740 號</span>
+											</div>
+											<div class="Issued"><span>9</span><a href="#">本期發行</a></div>
+										</div>
+									</li>
+									<li class="">
+										<a href="#" title="教育科技文化篇" class="Icons Icon-05"></a>
+										<div class="contents">
+											<div class="inner">
+												<h3>教育科技文化篇</h3>
+												<p><a href="" title="">經濟部令：修正「非都市土地申請變更編定為礦業用地興辦事業計畫審查作業要點」，自即日生效</a></p>
+												<span>2016/06/20   經務字 第 10504603740 號</span>
+											</div>
+											<div class="Issued"><span>9</span><a href="#">本期發行</a></div>
+										</div>
+									</li>
+									<li class="">
+										<a href="#" title="交通建設篇" class="Icons Icon-06"></a>
+										<div class="contents">
+											<div class="inner">
+												<h3>交通建設篇</h3>
+												<p><a href="" title="">經濟部令：修正「非都市土地申請變更編定為礦業用地興辦事業計畫審查作業要點」，自即日生效</a></p>
+												<span>2016/06/20   經務字 第 10504603740 號</span>
+											</div>
+											<div class="Issued"><span>9</span><a href="#">本期發行</a></div>
+										</div>
+									</li>
+									<li class="">
+										<a href="#" title="農業環保篇" class="Icons Icon-07"></a>
+										<div class="contents">
+											<div class="inner">
+												<h3>農業環保篇</h3>
+												<p><a href="" title="">經濟部令：修正「非都市土地申請變更編定為礦業用地興辦事業計畫審查作業要點」，自即日生效</a></p>
+												<span>2016/06/20   經務字 第 10504603740 號</span>
+											</div>
+											<div class="Issued"><span>9</span><a href="#">本期發行</a></div>
+										</div>
+									</li>
+									<li class="">
+										<a href="#" title="衛生勞動篇" class="Icons Icon-08"></a>
+										<div class="contents">
+											<div class="inner">
+												<h3>衛生勞動篇</h3>
+												<p><a href="" title="">經濟部令：修正「非都市土地申請變更編定為礦業用地興辦事業計畫審查作業要點」，自即日生效</a></p>
+												<span>2016/06/20   經務字 第 10504603740 號</span>
+											</div>
+											<div class="Issued"><span>9</span><a href="#">本期發行</a></div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<!-- hot Browse -->
+						<div class="col-md-4 col-sm-12 col-xs-12 Browse hidden-xs">
+							<h2>熱門瀏覽</h2>
+							<div class="Wrap">
+								<div class="Chapter">
+									<span>1</span>
+									<div class="inner">
+										<p><a href="#" title="">經濟部標準檢驗局公告：預告「膜式氣量計型式認證技術規範」修正草案</a></p>
+										<button type="button" class="btn BTN_Gray btn-xs">PDF</button>
+									</div>
+								</div>
+								<div class="Chapter">
+									<span>2</span>
+									<div class="inner">
+										<p><a href="#" title="">經濟部標準檢驗局公告：預告「膜式氣量計型式認證技術規範」修正草案</a></p>
+										<button type="button" class="btn BTN_Gray btn-xs">PDF</button>
+									</div>
+								</div>
+								<div class="Chapter">
+									<span>3</span>
+									<div class="inner">
+										<p><a href="#" title="">經濟部標準檢驗局公告：預告「膜式氣量計型式認證技術規範」修正草案</a></p>
+										<button type="button" class="btn BTN_Gray btn-xs">PDF</button>
+									</div>
+								</div>
+								<div class="Chapter">
+									<span>4</span>
+									<div class="inner">
+										<p><a href="#" title="">經濟部標準檢驗局公告：預告「膜式氣量計型式認證技術規範」修正草案</a></p>
+										<button type="button" class="btn BTN_Gray btn-xs">PDF</button>
+									</div>
+								</div>
+								<div class="Chapter">
+									<span>5</span>
+									<div class="inner">
+										<p><a href="#" title="">經濟部標準檢驗局公告：預告「膜式氣量計型式認證技術規範」修正草案</a></p>
+										<button type="button" class="btn BTN_Gray btn-xs">PDF</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--行政院公報篇別瀏覽-->
+		<section class="hidden-xs">
+			<div class="Block Bulletin">
+				<div class="container">
+					<div class="row">
+						<h2>行政院公報篇別瀏覽</h2>
+						<div class="Inner_wrap clearfix">
+							<div class="col-md-4 col-sm-4 hidden-xs Items">
+								<a href="#" title="">
+									<span class="Icon col-md-4">
+										<img src="images/basic/icons/Bulletin/01a.png" alt="">
+									</span>
+									<span class="col-md-8">
+										<p class="Clicks">1,569筆</p>
+										<h3 class="Title">綜合行政篇</h3>
+										<p class="Most_viewed Hot"><i class="icon-hand-pointer-o"></i>2000</p>
+									</span>
+								</a>
+							</div>
+							<div class="col-md-4 col-sm-4 hidden-xs Items">
+								<a href="#" title="">
+									<span class="Icon col-md-4">
+										<img src="images/basic/icons/Bulletin/02a.png" alt="">
+									</span>
+									<span class="col-md-8">
+										<p class="Clicks">1,569筆</p>
+										<h3 class="Title">內政篇</h3>
+										<p class="Most_viewed"><i class="icon-hand-pointer-o"></i>2000</p>
+									</span>
+								</a>
+							</div>
+							<div class="col-md-4 col-sm-4 hidden-xs Items">
+								<a href="#" title="">
+									<span class="Icon col-md-4">
+										<img src="images/basic/icons/Bulletin/03a.png" alt="">
+									</span>
+									<span class="col-md-8">
+										<p class="Clicks">1,569筆</p>
+										<h3 class="Title">外交國防法務篇</h3>
+										<p class="Most_viewed Hot"><i class="icon-hand-pointer-o"></i>2000</p>
+									</span>
+								</a>
+							</div>
+							<div class="col-md-4 col-sm-4 hidden-xs Items">
+								<a href="#" title="">
+									<span class="Icon col-md-4">
+										<img src="images/basic/icons/Bulletin/04a.png" alt="">
+									</span>
+									<span class="col-md-8">
+										<p class="Clicks">1,569筆</p>
+										<h3 class="Title">財政經濟篇</h3>
+										<p class="Most_viewed"><i class="icon-hand-pointer-o"></i>2000</p>
+									</span>
+								</a>
+							</div>
+							<div class="col-md-4 col-sm-4 hidden-xs Items">
+								<a href="#" title="">
+									<span class="Icon col-md-4">
+										<img src="images/basic/icons/Bulletin/05a.png" alt="">
+									</span>
+									<span class="col-md-8">
+										<p class="Clicks">1,569筆</p>
+										<h3 class="Title">教育科技文化篇</h3>
+										<p class="Most_viewed"><i class="icon-hand-pointer-o"></i>2000</p>
+									</span>
+								</a>
+							</div>
+							<div class="col-md-4 col-sm-4 hidden-xs Items">
+								<a href="#" title="">
+									<span class="Icon col-md-4">
+										<img src="images/basic/icons/Bulletin/06a.png" alt="">
+									</span>
+									<span class="col-md-8">
+										<p class="Clicks">1,569筆</p>
+										<h3 class="Title">交通建設篇</h3>
+										<p class="Most_viewed"><i class="icon-hand-pointer-o"></i>2000</p>
+									</span>
+								</a>
+							</div>
+							<div class="col-md-4 col-sm-4 hidden-xs Items">
+								<a href="#" title="">
+									<span class="Icon col-md-4">
+										<img src="images/basic/icons/Bulletin/07a.png" alt="">
+									</span>
+									<span class="col-md-8">
+										<p class="Clicks">1,569筆</p>
+										<h3 class="Title">農業環保篇</h3>
+										<p class="Most_viewed"><i class="icon-hand-pointer-o"></i>2000</p>
+									</span>
+								</a>
+							</div>
+							<div class="col-md-4 col-sm-4 hidden-xs Items">
+								<a href="#" title="">
+									<span class="Icon col-md-4">
+										<img src="images/basic/icons/Bulletin/08a.png" alt="">
+									</span>
+									<span class="col-md-8">
+										<p class="Clicks">1,569筆</p>
+										<h3 class="Title">衛生勞動篇</h3>
+										<p class="Most_viewed Hot"><i class="icon-hand-pointer-o"></i>2000</p>
+									</span>
+								</a>
+							</div>
+							<div class="col-md-4 col-sm-4 hidden-xs Items">
+								<a href="#" title="">
+									<span class="Icon col-md-4">
+										<img src="images/basic/icons/Bulletin/09a.png" alt="">
+									</span>
+									<span class="col-md-8">
+										<p class="Clicks">1,569筆</p>
+										<h3 class="Title">附  錄</h3>
+										<p class="Most_viewed"><i class="icon-hand-pointer-o"></i>2000</p>
+									</span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- 營運統計 -->
+		<section class="hidden-xs">
+			<div class="Block Statistics">
+				<div class="container">
+					<div class="row">
+						<h2>營運統計</h2>
+						<div class="Inner_wrap">
+							<div class="Items">
+								<h3>出刊總期數</h3>
+								<img src="images/basic/icons/Statistics/01.png" alt="">
+								<p><span>250</span>期</p>
+							</div>
+							<div class="Items">
+								<h3>出刊總則數</h3>
+								<img src="images/basic/icons/Statistics/02.png" alt="">
+								<p><span>7,600</span>筆</p>
+							</div>
+							<div class="Items">
+								<h3>瀏覽人次</h3>
+								<img src="images/basic/icons/Statistics/03.png" alt="">
+								<p><span>460,000</span>人</p>
+							</div>
+							<div class="Items">
+								<h3>會員數</h3>
+								<img src="images/basic/icons/Statistics/04.png" alt="">
+								<p><span>75,000</span>人</p>
+							</div>
+							<div class="Items">
+								<h3>開放資料集</h3>
+								<img src="images/basic/icons/Statistics/05.png" alt="">
+								<p><span>1,320</span>項</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- <section class="hidden-xs" id="GoTop">
+			<a href="" title="回頂端"><i class="icon-up-small"></i></a>
+		</section> -->
+	</section>
+	<!-- fatfooter -->
+	<div id="FatFooter" class="hidden-xs">
+		<div class="container">
+			<input type="button" name="FatFooterBtn" id="FatFooterBtn" value="收合" class="btn FatFooterBtn">
+			<nav>
+				<ul>
+					<li><a href="#" title="" class="Title">關於公報</a>
+						<ul>
+							<li><a href="" title="">背景說明</a></li>
+							<li><a href="" title="">內容範圍</a></li>
+							<li><a href="" title="">作業規範</a></li>
+						</ul>
+					</li>
+					<li><a href="#" title="" class="Title">公報瀏覽</a>
+						<ul>
+							<li><a href="" title="">卷期瀏覽</a></li>
+							<li>
+								<a href="" title="">功能篇別瀏覽<i class="icon-down-open"></i></a> 
+								<ul>
+									<li><a href="" title="">綜合行政篇</a></li>
+									<li><a href="" title="">內政篇</a></li>
+									<li><a href="" title="">外交國防法務篇</a></li>
+									<li><a href="" title="">財政經濟篇</a></li>
+									<li><a href="" title="">教育科技文化篇</a></li>
+									<li><a href="" title="">交通建設篇</a></li>
+									<li><a href="" title="">農業環保篇</a></li>
+									<li><a href="" title="">衛生勞動篇</a></li>
+									<li><a href="" title="">附錄篇</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="" title="">類型瀏覽<i class="icon-down-open"></i></a>
+								<ul class="AA">
+									<li><a href="" title="">法規</a></li>
+									<li><a href="" title="">行政規則</a></li>
+									<li><a href="" title="">公告及送達</a></li>
+									<li><a href="" title="">處分</a></li>
+									<li><a href="" title="">其他</a></li>
+									<li><a href="" title="">特載</a></li>
+									<li><a href="" title="">專載</a></li>
+									<li><a href="" title="">轉載</a></li>
+								</ul>
+							</li>
+							<li><a href="" title="">主題瀏覽</a></li>
+							<li><a href="" title="">施政瀏覽</a></li>
+							<li><a href="" title="">服務瀏覽</a></li>
+						</ul>
+		 			</li>
+					<li><a href="#" title="" class="Title Fixpadding">開放資料<br><span>(Open Data)</span></a>
+						<ul>
+							<li><a href="" title="">使用說明</a></li>
+							<li><a href="" title="">最新下載</a></li>
+							<li><a href="" title="">本月資料</a></li>
+							<li><a href="" title="">歷史資料</a></li>
+						</ul>
+					</li>
+					<li><a href="#" title="" class="Title">相關連結</a>
+						<ul>
+							<li><a href="" title="">國內公報</a></li>
+							<li><a href="" title="">國外公報</a></li>
+							<li><a href="" title="">其他網站</a></li>
+						</ul>
+					</li>
+					<li><a href="#" title="" class="Title">常見問題</a></li>
+					<li><a href="#" title="" class="Title">下載專區</a>
+						<ul>
+							<li><a href="" title="">檔案下載</a></li>
+							<li><a href="" title="">連結圖檔下載</a></li>
+						</ul>
+					</li>
+					<li class="">
+						<a href="#" title="" class="Goverment"><i class="icon-bookmark-1"></i>機關名錄</a>
+						<a href="#" title="" class="Language">English</a>
+						<div class="QR_Code"><p><img src="images/QR.png" alt="" class="img-responsive"></p>行政院公報資訊網</div>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+	<!-- footer -->
+	<section id="Footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-10">
+					<div class="Footer_info">
+						<div>對於本網站提供之相關資訊，如有任何疑義，請逕向公(發)布之機關洽詢</div>
+						<div class="Address"><span>行政院公報編印中心</span>　服務專線：02-23924146　/　傳真專線：02-23569970　電子信箱：ego@gazette.nat.gov.tw <br>
+						服務時間：每週一至週五上班時間　AM 8:30~12:30 PM 1:30~5:30　/　公報紙本訂閱，請洽國家書店松江門市（秀威）：02-27960359<br>
+						<span>國家發展委員會</span>　版權所有 / 本站建議使用IE7 以上瀏覽，800x600 或1024x768 螢幕解析
+						</div>
+					</div>
+				</div>
+				<div class="col-md-2">
+					<div class="Footer_icon">
+						<a class="Accessible_icon" href="#" target="_blank"><img src="images/basic/aplus.png" alt="無障礙A+"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- 回頂端 -->
+	<a href="#aU" class="scrollToTop" title="回頂端">回頂端</a>
+
+	<!-- jQuery -->
+	<script  src="assets/js/jquery-1.11.2.js"></script>
+	<!-- Bootstrap JavaScript -->
+	<script src="assets/module/bootstrap-3.3.2/js/bootstrap.min.js"></script>
+	<script src="assets/js/jquery.lazyload.min.js"></script>
+	<script src="assets/js/BS3JS.min.js"></script>
+
+	<!-- header offcanvas -->	
+	<script src="assets/js/bootstrap.offcanvas.js"></script>
+	<!-- slick  -->
+	<script src="assets/module/slick/slick.js"></script>
+	<!-- slick 自訂 -->
+	<script src="js/slick-addscripts.js"></script> 
+	<!-- scrollUp-->
+	<script type="text/javascript" src="assets/js/jquery.scrollUp.js"></script> 
+	<!-- dropdownHover-->
+	<script src="js/bootstrap-hover-dropdown.js"></script>
+	<!-- myset -->
+	<script src="js/myset.js"></script>
+</body>
+</html>
