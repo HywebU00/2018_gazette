@@ -1,0 +1,3 @@
+.Side-List .Inner-wrap ul{ 
+	margin-top: -27px !important;/*ie是個大智障，修正overflow: hidden 的空格*/
+}

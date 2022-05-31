@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link type="image/ico" rel="icon" href="images/basic/favicon.png" /> 
+	<title>行政院公報資訊網</title> 
+	
+	<!-- Bootstrap CSS -->
+	<link href="css/theme.css" rel="stylesheet">
+	<!-- <link href="assets/module/bootstrap-3.3.2/theme.min.css" rel="stylesheet"> -->
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+	<!-- Add fancyBox main JS and CSS files -->
+	<script type="text/javascript" src="js/fancyBox/jquery.fancybox.js?v=2.1.5"></script>
+	<script type="text/javascript" src="js/fancyBox/fanctbox_set.js"></script>
+	<link rel="stylesheet" type="text/css" href="js/fancyBox/jquery.fancybox.css?v=2.1.5" media="screen" />
+
+	<!-- slick 輪播-->
+	<link rel="stylesheet" href="assets/module/slick/slick.css">
+	<link rel="stylesheet" href="assets/module/slick/slick-theme.css">
+	<!-- slick 輪播自訂CSS -->
+	<link rel="stylesheet" href="css/slick-slide.css">		
+	<!-- social-buttons -->
+	<link rel="stylesheet" href="assets/module/fontello/css/fontello.css">
+	<link rel="stylesheet" href="assets/module/fontello/css/animation.css">
+	<!-- 側邊欄收合-->
+	<link href="stylesheet" type="text/css" href="assets/css/bootstrap.offcanvas.css"/>
+	<!-- 自訂CSS -->
+	<link rel="stylesheet" href="css/layout.css">
+</head>
+<body>
+	<!-- Header -->
+	<section id="Header" class="navbar-fixed-top">
+		<nav class="navbar megamenu set-relative" role="navigation">
+			<div class="accesskey hidden-xs"><a href="#" title="header" id="accesskeyU" accesskey="U">:::</a></div>
+			<div class="container">
+				<div class="row">
+					<!--手機收合選單-->
+					<div class="navbar-header set-relative">
+						<button type="button" class="navbar-toggle pull-left" data-toggle="collapse" data-target="#offcanvas-left">
+							<span class="sr-only">Toggle navigation</span><i class="icon-menu"></i>
+						</button>
+						<!--logo-->
+						<a class="Logo" href="#"><img src="images/basic/logo.png" alt="" class="img-responsive"></a>
+						<button type="button" class="navbar-toggle pull-right" data-toggle="collapse" data-target="#offcanvas-right">
+							<span class="sr-only">Toggle navigation</span><i class="icon-down-open"></i>
+						</button> 
+					</div>
+					<!--其他選單 收合右側-->
+					<div class="collapse navbar-collapse set-relative" id="offcanvas-right" role="navigation">
+						<!--桌機、平板-->
+						<div class="hidden-xs">
+							<!--Links-->
+							<div class="Normal-Links">
+								<ul class="nav navbar-nav">
+									<li><a href="#" title="">網站導覽</a></li>
+									<!--language-->
+									<li><a href="#" title="" class="Language">ENGLISH</a></li>
+									<!--會員專區-->
+									<li><a href="#" title="" class="Member">加入會員</a></li>
+									<li><a href="#" title="" class="Member">會員登入</a></li>
+								</ul> 
+							</div>
+						</div>
+						<!--手機版-->
+						<div>
+							<!--Search-->
+							<div class="Search visible-xs-block">
+								<div class="accesskey hidden-xs"><a href="#" accesskey="S" title="搜尋公報標題/公文字號/主旨/說明/關鍵詞/全文">:::</a></div>
+									<form class="navbar-form" role="search">       
+										<div class="input-group">
+											<input type="text" class="form-control" placeholder="搜尋公報標題/公文字號/主旨/說明/關鍵詞/全文">
+											<span class="input-group-btn">
+												<button type="button" class="btn">
+													<span class="glyphicon glyphicon-search"></span>
+												</button>
+											</span>
+										</div>
+									</form>
+								</div>
+							</div>
+							<!--Links-->
+							<div class="Normal-Links visible-xs-block">
+								<!--會員登入-->
+								<h3>會員登入</h3>
+								<ul>
+									<li><a href="#" title=""><b class="caret"></b>以MyEGOV帳號登入</a></li>
+									<li><a href="#" title=""><b class="caret"></b>以Facebook帳號登入</a></li>
+									<li><a href="#" title=""><b class="caret"></b>以Google帳號登入</a></li>
+								</ul>
+								<!--會員登入-->
+								<h3>會員專區</h3>
+								<ul>
+									<li><a href="#" title=""><b class="icon-angle-right"></b>我的關注</a></li>
+									<li><a href="#" title=""><b class="icon-angle-right"></b>我的書籤</a></li>
+									<li><a href="#" title=""><b class="icon-angle-right"></b>我的查詢歷史</a></li>
+									<li><a href="#" title=""><b class="icon-angle-right"></b>法規更新追蹤</a></li>
+									<li><a href="#" title=""><b class="icon-angle-right"></b>登出</a></li>
+								</ul>
+								<!--language-->
+								<a href="#" class="Language">ENGLISH</a>
+							</div>
+						</div>
+					</div>
+
+					<!--主選單  收合左側-->
+					<div class="collapse navbar-collapse" id="offcanvas-left" role="navigation">
+						<div class="MainMenu pull-lg-right pull-md-right">
+							<ul class="nav navbar-nav">
+								<li class="dropdown hidden-xs">
+									<a href="#" data-hover="dropdown" data-toggle="dropdown" class="active dropdown-toggle">關於公報<b class="caret"></b></a>
+									<ul class="dropdown-menu">
+										<li><a href="" title="">背景說明</a></li>
+										<li><a href="" title="">內容範圍</a></li>
+										<li><a href="" title="">作業規範</a></li>
+									</ul>
+								</li>
+								<li class="dropdown" id="Show_xs">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">公報瀏覽<b class="caret"></b></a>
+									<ul class="dropdown-menu">
+										<li>
+											<div class="megamenu-content">
+												<div class="row">
+													<ul class="col-sm-4 list-unstyled">
+														<li><a href="" title=""><strong>卷期瀏覽</strong></a></li>
+													</ul>
+													<ul class="col-sm-4 list-unstyled">
+														<li><a href="#" title=""><strong title="功能篇別瀏覽">功能篇別瀏覽</strong></a></li>
+														<ul>
+															<li><a href="#" title="">綜合行政篇</a></li>
+															<li><a href="#" title="">內政篇</a></li>
+															<li><a href="#" title="">外交國防法務篇</a></li>
+															<li><a href="#" title="">財政經濟篇</a></li>
+															<li><a href="#" title="">教育科技文化篇</a></li>
+															<li><a href="#" title="">交通建設篇</a></li>
+															<li><a href="#" title="">農業環保篇</a></li>
+															<li><a href="#" title="">衛生勞動篇</a></li>
+															<li><a href="#" title="">附錄</a></li>
+														</ul>
+													</ul>
+													<ul class="col-sm-4 list-unstyled hidden-xs">
+														<li><a href="#" title=""><strong title="類型瀏覽">類型瀏覽</a></strong></li>
+														<ul>
+															<li><a href="#" title="">行政規則</a></li>
+															<li><a href="#" title="">其他</a></li>
+															<li><a href="#" title="">轉載</a></li>
+															<li><a href="#" title="">特載</a></li>
+															<li><a href="#" title="">處分</a></li>
+															<li><a href="#" title="">法規</a></li>
+															<li><a href="#" title="">公告及送達</a></li>
+															<li><a href="#" title="">專載</a></li>
+														</ul>
+													</ul>
+													<ul class="col-sm-4 list-unstyled hidden-xs">
+														<li><a href="#" title=""><strong>主題瀏覽</strong></a></li>
+													</ul>
+													<ul class="col-sm-4 list-unstyled hidden-xs">
+														<li><a href="#" title=""><strong>施政瀏覽</strong></a></li>
+													</ul>
+													<ul class="col-sm-4 list-unstyled hidden-xs">
+														<li><a href="#" title=""><strong>服務瀏覽</strong></a></li>
+													</ul>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</li>
+								<li class="dropdown hidden-xs">
+									<a href="#" data-hover="dropdown" data-toggle="dropdown" class="dropdown-toggle">開放資料<b class="caret"></b></br><span>(OPEN DATA)</span></a>
+									<ul class="dropdown-menu">
+										<li><a href="" title="">使用說明</a></li>
+										<li><a href="" title="">最新下載</a></li>
+										<li><a href="" title="">本月瀏覽</a></li>
+										<li><a href="" title="">歷史資料</a></li>
+									</ul>
+								</li>
+								<li class="dropdown hidden-xs">
+									<a href="#" data-hover="dropdown" data-toggle="dropdown" class="dropdown-toggle">相關連結<b class="caret"></b></a>
+									<ul class="dropdown-menu">
+										<li><a href="" title="">國內公報</a></li>
+										<li><a href="" title="">國外公報</a></li>
+										<li><a href="" title="">其他網站</a></li>
+									</ul>
+								</li>
+								<li class="hidden-xs">
+									<a href="#" class="">常見問題</a>
+								</li>
+								<li class="dropdown hidden-xs">
+									<a href="#" data-hover="dropdown" data-toggle="dropdown" class="dropdown-toggle">下載專區<b class="caret"></b></a>
+									<ul class="dropdown-menu">
+										<li><a href="" title="">檔案下載</a></li>
+										<li><a href="" title="">連結圖檔下載</a></li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div> 
+			</div>
+		</nav> 
+	</section>
+	<!-- Content -->
+	<section id="MainContent">
+		<!-- Search -->
+		<section class="hidden-xs">
+			<div class="Block">
+				<div class="Search_Bar">
+					<div class="container">
+						<div class="row">
+							<div class="Search">
+								<div class="accesskey hidden-xs">
+									<a href="#" accesskey="S" title="搜尋公報標題/公文字號/主旨/說明/關鍵詞/全文">:::</a>
+								</div>
+								<div class="">
+									<form class="navbar-form" role="search">       
+										<div class="input-group col-md-9 col-sm-8">
+											<input type="text" class="form-control" placeholder="搜尋公報標題/公文字號/主旨/說明/關鍵詞/全文">
+											<span class="input-group-btn">
+												<button type="button" class="btn">
+													<span class="glyphicon glyphicon-search"></span>
+												</button>
+											</span>
+										</div>
+										<button type="button" class="btn BTN-Orange">進階搜尋</button>
+										<button type="button" class="btn BTN-Orange" title="總統府、五院及地方政府公報整合查詢">整合查詢</button>
+									</form>
+								</div>
+							</div>
+							<div class="HotKeywords">
+								熱門關鍵字：
+								<a href="#">公 告</a>
+								<a href="#">勞動部</a>
+								<a href="#">財政部</a>
+								<a href="#">法 規</a>
+								<a href="#">替代役</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- function -->
+		<div class="Block0">
+			<div class="container">
+				<div class="row">
+					<article class="col-sm-12 col-md-12">
+						<!-- breadcrumb -->
+						<div class="accesskey">
+							<a href="#" accesskey="C" title="中央內容區塊">:::</a>
+						</div>
+						<div id="breadcrumb" class="">
+							<ol class="breadcrumb">
+								<li><i class="icon-home-1"></i><a href="#" title="">首頁</a></li>
+								<li><a href="#" title="">進階搜尋</a></li>
+								<li class="active">查詢結果</li>
+							</ol>
+						</div>
+					</article>
+				</div>
+			</div>
+		</div>
+		<!-- content -->
+		<div class="Block ContentPage">
+			<div class="container">
+				<div class="row">
+					<!--內容-->
+					<div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
+						<div class="Data_Info">
+							<div class="Item">
+								<section class="Warn">
+									<h2>對於本網站提供之相關資訊，如有任何疑義，請逕向公（發）布機關洽詢。</h2>
+								</section>
+								<section class="Block">
+									<p><span>行政院原子能委員會令</span><span>中華民國105年2月5日</span><span>會輻字第10500018292號</span></p>
+									<h3>行政院原子能委員會公告：預告「商品輻射限量標準」第2條、第6條修正草案</h3>
+									<h3 class="EN hidden-xs">ATOMIC ENERGY COUNCIL, EXECUTIVE YUAN Notice is hereby given, to commence a period of public comments for the draft amendment on Article 2 and 6 of "Standards for Limiting Radioactivity in Commodities"</h3>
+								</section>
+							</div>
+							<div class="Item">
+								<section class="Block">
+									<!--瀏覽數-->
+									<div class="Function FunctionInfo">
+										<div class="Info">
+											<span title="瀏覽數" class=""><i class="icon-eye-3"></i>1390</span>
+											<span title="書籤" class=""><i class="icon-bookmarks"></i>666</span>
+											<span title="法規更新通知" class=""><i class="icon-megaphone"></i>2910</span>
+										</div>
+									</div>
+									<!--社群-->
+									<div class="Function FunctionPublic">
+										<div class="Public">
+											<span>分享至：</span>
+											<a href="#" class="FB-BTN"><i class="icon-facebook-1"></i></a>
+											<a href="#" class="Google-BTN"><i class="icon-gplus"></i></a>
+										</div>
+									</div>
+									<!--按鈕-->
+									<div class="Control_BTN">
+										<a href="" title="" class="btn BTN-DarkBlue" onclick="window.open('SP1-1-A.html ', '英文摘要', config='height=300,width=500');"><i class="icon-pencil-4"></i>英文摘要</a>
+										<a href="" title="" class="btn BTN-DarkBlue" target="_blank"><i class="icon-doc-6"></i>英文網頁文字版</a>
+										<a href="" title="" class="btn BTN-DarkBlue" target="_blank"><i class="icon-link-4"></i>全國法規資料庫</a>
+									</div>
+								</section>
+							</div>
+							<div class="Item">
+								<section class="">
+									<h4>主　旨：</h4>
+									<div class="Text">
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+										tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+										quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+										consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+										cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+										proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+									</div>
+								</section>
+								<section class="">
+									<h4>依　據：</h4>
+									<div class="Text">
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+										tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+										quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+										consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+										cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+										proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+									</div>
+								</section>
+								<section class="">
+									<h4>公告事項：</h4>
+									<div class="Text">
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+										tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+										quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+										consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+										cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+										proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+									</div>
+								</section>
+								<section class="">
+									<h4>院　長　　林　全</h4>
+								</section>
+								<section class="Warn">
+									<h3>「本則內容涉及個人資料，依個人資料保護法規定，相關資料已經移除。」</h3>
+								</section>
+							</div>
+						</div>
+					</div>
+					<!--側邊欄-->
+					<div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+						<div class="Side_Links">
+							<!---->
+							<div class="Item">
+								<span class="Tag">公告及送達</span>
+								<h2>農業環保篇</h2>
+								<h2>行政院原子能委員會</h2>
+								<div class="Inner_wrap">
+									<dl>
+										<dt>內容類型：</dt>
+										<dd>法規命令訂定、修正草案及廢止案之預告</dd>
+										<dt>出刊日期：</dt>
+										<dd>2016年2月5日</dd>
+										<dt>表示意見截止日期：</dt>
+										<dd>2016年2月19日</dd>
+									</dl>
+								</div>
+								<!--BTN-->
+								<div class="Control_BTN hidden-xs">
+									<a href="" title="" class="btn btn-block BTN-Customize"><i class="icon-bookmarks"></i>加入書籤</a>
+								</div>
+							</div>
+							<!--相關主題-->
+							<div class="Item">
+								<h2>相關主題</h2>
+								<div class="Inner_wrap">
+									<p><a href="" title="">JULIE因違反就業服務法事件訴願案訴願決定書節本公示送達行政院對JULIUS TARAH JULIE因違反就業服務法事件訴願案訴願決定書節本公示送達</a></p>
+									<button type="button" class="btn BTN_Gray btn-xs">PDF</button>
+								</div>
+								<div class="Inner_wrap">
+									<p><a href="" title="">JULIE因違反就業服務法事件訴願案訴願決定書節本公示送達行政院對JULIUS TARAH JULIE因違反就業服務法事件訴願案訴願決定書節本公示送達</a></p>
+									<button type="button" class="btn BTN_Gray btn-xs">PDF</button>
+								</div>
+								<div class="Inner_wrap">
+									<p><a href="" title="">JULIE因違反就業服務法事件訴願案訴願決定書節本公示送達行政院對JULIUS TARAH JULIE因違反就業服務法事件訴願案訴願決定書節本公示送達</a></p>
+									<button type="button" class="btn BTN_Gray btn-xs">PDF</button>
+								</div>
+								<div class="Inner_wrap">
+									<p><a href="" title="">JULIE因違反就業服務法事件訴願案訴願決定書節本公示送達行政院對JULIUS TARAH JULIE因違反就業服務法事件訴願案訴願決定書節本公示送達</a></p>
+									<button type="button" class="btn BTN_Gray btn-xs">PDF</button>
+								</div>
+								<div class="Inner_wrap">
+									<p><a href="" title="">JULIE因違反就業服務法事件訴願案訴願決定書節本公示送達行政院對JULIUS TARAH JULIE因違反就業服務法事件訴願案訴願決定書節本公示送達</a></p>
+									<button type="button" class="btn BTN_Gray btn-xs">PDF</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--回頂端-->
+		<section class="hidden-xs" id="GoTop">
+			<a href="" title="回頂端"><i class="icon-up-small"></i></a>
+		</section>
+	</section>
+	<!-- fatfooter -->
+	<div id="FatFooter" class="hidden-xs">
+		<div class="container">
+			<input type="button" name="FatFooterBtn" id="FatFooterBtn" value="收合" class="btn FatFooterBtn">
+			<nav>
+				<ul>
+					<li><a href="#" title="" class="Title">關於公報</a>
+						<ul>
+							<li><a href="" title="">背景說明</a></li>
+							<li><a href="" title="">內容範圍</a></li>
+							<li><a href="" title="">作業規範</a></li>
+						</ul>
+					</li>
+					<li><a href="#" title="" class="Title">公報瀏覽</a>
+						<ul>
+							<li><a href="" title="">卷期瀏覽</a></li>
+							<li>
+								<a href="" title="">功能篇別瀏覽<i class="icon-down-open"></i></a> 
+								<ul>
+									<li><a href="" title="">綜合行政篇</a></li>
+									<li><a href="" title="">內政篇</a></li>
+									<li><a href="" title="">外交國防法務篇</a></li>
+									<li><a href="" title="">財政經濟篇</a></li>
+									<li><a href="" title="">教育科技文化篇</a></li>
+									<li><a href="" title="">交通建設篇</a></li>
+									<li><a href="" title="">農業環保篇</a></li>
+									<li><a href="" title="">衛生勞動篇</a></li>
+									<li><a href="" title="">附錄篇</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="" title="">類型瀏覽<i class="icon-down-open"></i></a>
+								<ul class="AA">
+									<li><a href="" title="">法規</a></li>
+									<li><a href="" title="">行政規則</a></li>
+									<li><a href="" title="">公告及送達</a></li>
+									<li><a href="" title="">處分</a></li>
+									<li><a href="" title="">其他</a></li>
+									<li><a href="" title="">特載</a></li>
+									<li><a href="" title="">專載</a></li>
+									<li><a href="" title="">轉載</a></li>
+								</ul>
+							</li>
+							<li><a href="" title="">主題瀏覽</a></li>
+							<li><a href="" title="">施政瀏覽</a></li>
+							<li><a href="" title="">服務瀏覽</a></li>
+						</ul>
+		 			</li>
+					<li><a href="#" title="" class="Title Fixpadding">開放資料<br><span>(Open Data)</span></a>
+						<ul>
+							<li><a href="" title="">使用說明</a></li>
+							<li><a href="" title="">最新下載</a></li>
+							<li><a href="" title="">本月資料</a></li>
+							<li><a href="" title="">歷史資料</a></li>
+						</ul>
+					</li>
+					<li><a href="#" title="" class="Title">相關連結</a>
+						<ul>
+							<li><a href="" title="">國內公報</a></li>
+							<li><a href="" title="">國外公報</a></li>
+							<li><a href="" title="">其他網站</a></li>
+						</ul>
+					</li>
+					<li><a href="#" title="" class="Title">常見問題</a></li>
+					<li><a href="#" title="" class="Title">下載專區</a>
+						<ul>
+							<li><a href="" title="">檔案下載</a></li>
+							<li><a href="" title="">連結圖檔下載</a></li>
+						</ul>
+					</li>
+					<li class="">
+						<a href="#" title="" class="Goverment"><i class="icon-bookmark-1"></i>機關名錄</a>
+						<a href="#" title="" class="Language">English</a>
+						<div class="QR_Code"><p><img src="images/QR.png" alt="" class="img-responsive"></p>行政院公報資訊網</div>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+	<!-- footer -->
+	<section id="Footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-10">
+					<div class="Footer_info">
+						<div>對於本網站提供之相關資訊，如有任何疑義，請逕向公(發)布之機關洽詢</div>
+						<div class="Address"><span>行政院公報編印中心</span>　服務專線：02-23924146　/　傳真專線：02-23569970　電子信箱：ego@gazette.nat.gov.tw <br>
+						服務時間：每週一至週五上班時間　AM 8:30~12:30 PM 1:30~5:30　/　公報紙本訂閱，請洽國家書店松江門市（秀威）：02-27960359<br>
+						<span>國家發展委員會</span>　版權所有 / 本站建議使用IE7 以上瀏覽，800x600 或1024x768 螢幕解析
+						</div>
+					</div>
+				</div>
+				<div class="col-md-2">
+					<div class="Footer_icon">
+						<a class="Accessible_icon" href="#" target="_blank"><img src="images/basic/aplus.png" alt="無障礙A+"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- jQuery -->
+	<script  src="assets/js/jquery-1.11.2.js"></script>
+
+	<!-- Bootstrap JavaScript -->
+	<script src="assets/module/bootstrap-3.3.2/js/bootstrap.min.js"></script>
+	<script src="assets/js/jquery.lazyload.min.js"></script>
+	<script src="assets/js/BS3JS.min.js"></script>
+
+	<!-- header offcanvas -->	
+	<script src="assets/js/bootstrap.offcanvas.js"></script>
+
+	<!-- 主選單scroll top 固定  -->
+	<script type='text/javascript'>
+		$(function(){
+			$(window).load(function(){
+				$(window).bind('scroll resize', function(){
+					var $this = $(this);
+					var $this_Top=$this.scrollTop();
+					var x = $(window).width();
+
+					if( x>767){
+						//當高度 <42時，#Header回到原位
+						if($this_Top < 42){
+							$('#Header').stop().animate({top:"0px"},300);
+							$('#Header .navbar').css('box-shadow','none');
+						}
+						//當高度 >42時，#Header上移42
+						if($this_Top > 42){
+							$('#Header').stop().animate({top:"-42px"},300);
+							$('#Header .navbar').css('box-shadow','0px 4px 10px rgba(20%,20%,40%,0.3)');
+						}
+					}else{
+						//手機版的話，#Header固定
+						$('#Header').css('position','fixed');
+					}
+			　　}).scroll();
+			});
+		});
+	</script>
+
+	<!-- slick  -->
+	<script src="assets/module/slick/slick.js"></script>
+	<!-- slick 自訂 -->
+	<script src="js/slick-addscripts.js"></script> 
+	<script type="text/javascript">
+		$(function(){
+			$('.Multiple_slider').slick({
+				dots: true,
+				//dotsClass: 'slick-number', 原點可以換成數字
+				infinite: true,
+				autoplay: true,
+				autoplaySpeed: 3000,
+				arrows: true,
+				slidesToShow: 1, //一次顯示幾張
+				slidesToScroll: 1 //一次輪播幾張
+			});
+		});
+
+		$(document).ready(function() {
+			$('.Responsive_slider').slick({
+				dots: true,
+				infinite: true,
+				speed: 500,
+				slidesToShow: 3,
+				slidesToScroll: 1,
+				autoplay: true,
+				autoplaySpeed: 1500,
+				responsive: [{
+					breakpoint: 900,
+					settings: {
+						slidesToShow: 3,
+						slidesToScroll: 3,
+						infinite: true,
+						dots: true
+					}
+				}, {
+					breakpoint: 720,
+					settings: {
+						slidesToShow: 2,
+						slidesToScroll: 2
+					}
+				}, {
+					breakpoint: 480,
+					settings: {
+						slidesToShow: 1,
+						slidesToScroll: 1
+					}
+				}]
+			});
+		});
+	</script>
+
+	<!-- 送select選單內容至select框內 -->	
+	<script type="text/javascript">
+		$(document).ready(function(e){
+			$('.search-panel .dropdown-menu').find('a').click(function(e) {
+				e.preventDefault();
+				var param = $(this).attr("href").replace("#","");
+				var concept = $(this).text();
+				$('.search-panel span#search_concept').text(concept);
+				$('.input-group #search_param').val(param);
+			});
+		});
+	</script>  
+
+	<!-- 左右主選單 點一個秀一個-->
+	<script type="text/javascript">
+		$(function(){
+			$('#Header .navbar-header .pull-right').click(function(){
+				$(this).parent().siblings().eq(1).removeClass('in');
+			});
+
+			$('#Header .navbar-header .pull-left').click(function(){
+				$(this).parent().siblings().eq(0).removeClass('in');
+			});
+		})
+	</script>
+
+	<!-- Open Fatfooter-->
+	<script type="text/javascript">
+		//Fatfooter 內容收合
+		$(function(){
+			$(".FatFooterBtn").click(function() {
+		        $('#FatFooter>div>nav>ul>li>ul').slideToggle(function() {
+		            if ($(this).is(':visible')) {
+		                document.getElementById("FatFooterBtn").value = "收合";
+		            } else {
+		                document.getElementById("FatFooterBtn").value = "展開";
+		            }
+		        });
+		        $(this).toggleClass('close');
+		    });
+		})
+
+		//第三重 內容收合
+		$(function(){
+			$("#FatFooter nav ul ul span.switch").click(function(){
+				$(this).next('ul.AA').slideToggle(600);
+			})
+		})
+	</script>
+
+	<!-- Go Top -->
+	<script type="text/javascript">
+		$(function(){
+			$('#GoTop').click(function(){
+				$('html,body').animate({scrollTop:0},900);
+				return false;
+			})
+		})
+	</script>
+
+	<!-- Tab -->
+	<script type="text/javascript">
+		//阿尼的寫法 RWD
+		$(function(){
+		   $('.options li.here .contents').show();
+		  
+		   //點到頁籤後
+		   // $('.options>li>a').focus(function(){
+		   $('.options>li>a').click(tabs);
+		   $('.options>li>a').focus(tabs);//因為無障礙要可以使用鍵盤點選，所以用focus的設定
+			  
+			function tabs(){
+				    
+				var  li_index=$(this).index();
+				
+				$('.options .here').removeClass('here');
+				$(this).parent().addClass('here');
+
+				return false;
+			}
+	  })
+	</script>
+
+	<!-- scrollUp-->
+	<script type="text/javascript" src="assets/js/jquery.scrollUp.js"></script> 
+	<!-- scrollUp 自訂-->     
+	<script type="text/javascript">
+		$(function () {
+			$.scrollUp({
+			    scrollName: 'scrollUp', // Element ID
+			    topDistance: '300', // Distance from top before showing element (px)
+			    topSpeed: 300, // Speed back to top (ms)
+			    animation: 'fade', // Fade, slide, none
+			    animationInSpeed: 200, // Animation in speed (ms)
+			    animationOutSpeed: 200, // Animation out speed (ms)
+			    scrollText: 'Scroll to top', // Text for element
+			    activeOverlay: false, // Set CSS color to display scrollUp active point, e.g '#00FFFF'
+			});
+		});
+	</script>
+
+	<!-- 字級 -->
+	<script type="text/javascript">
+		$(function(){
+			$(".Word-Class .FontSmall").click(
+				function(){
+					$(".ContentPage").css({fontSize:"90%"});
+					$(".PopBox .Block_Title").css({fontSize:"16px"});
+					$(".PopBox .Block_Text").css({fontSize:"13px"});
+					$("#FatFooter").css({fontSize:"90%"});
+					$("#FatFooter .Title").css({fontSize:"90%"});
+					$("h1").css({fontSize:"30px"});
+					$("h2").css({fontSize:"26px"});
+					$("h3").css({fontSize:"20px"});
+					$("h4").css({fontSize:"16px"});
+					$("h5").css({fontSize:"11px"});
+					$("h6").css({fontSize:"11px"});
+					/*$(".Block0 .MainLink ul li a").css({fontSize:"1em"});*/
+					$("#Header .navbar #offcanvas-right ul.nav.White > li a").css({fontSize:"0.9em"});
+					return false;
+					}
+			)
+			$(".Word-Class .FontMidium").click(
+				function(){
+					$(".ContentPage").css({fontSize:"100%"});
+					$(".PopBox .Block_Title").css({fontSize:"18px"});
+					$(".PopBox .Block_Text").css({fontSize:"15px"});
+					$("#FatFooter").css({fontSize:"100%"});
+					$("#FatFooter .Title").css({fontSize:"18px"});
+					$("h1").css({fontSize:"32px"});
+					$("h2").css({fontSize:"2.2em"});
+					$("h3").css({fontSize:"26px"});
+					$("h4").css({fontSize:"20px"});
+					$("h5").css({fontSize:"13px"});
+					$("h6").css({fontSize:"13px"});
+					/*$(".Block0 .MainLink ul li a").css({fontSize:"1.2em"});*/
+					$("#Header .navbar #offcanvas-right ul.nav.White > li a").css({fontSize:"1em"});
+					return false;
+					}
+			)
+			$(".Word-Class .FontLarge").click(
+				function(){
+					$(".ContentPage").css({fontSize:"110%"});
+					$(".PopBox .Block_Title").css({fontSize:"20px"});
+					$(".PopBox .Block_Text").css({fontSize:"17px"});
+					$("#FatFooter").css({fontSize:"110%"});
+					$("#FatFooter .Title").css({fontSize:"22px"});
+					$("h1").css({fontSize:"43px"});
+					$("h2").css({fontSize:"36px"});
+					$("h3").css({fontSize:"30px"});
+					$("h4").css({fontSize:"23px"});
+					$("h5").css({fontSize:"19px"});
+					$("h6").css({fontSize:"17px"});
+					/*$(".Block0 .MainLink ul li a").css({fontSize:"1.4em"});*/
+					$("#Header .navbar #offcanvas-right ul.nav.White > li a").css({fontSize:"1.2em"});
+					return false;	
+					}
+			)
+			//$(this).addClass('');
+		})
+
+		$(function(){
+			$('.Word-Class').find('a').on('click' , function(){
+				$('.Word-Class a').removeClass('active');
+				$(this).addClass('active');
+			})
+		})
+	</script>
+
+	<!-- dropdownHover-->
+	<script src="js/bootstrap-hover-dropdown.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+	      $('.js-activated').dropdownHover().dropdown();
+	    });
+	</script>
+	<script type="text/javascript">
+		$(function () {
+
+			$('ul.nav').children('li.dropdown').keyup(
+				function(){
+					$(this).children().show();
+					$(this).siblings().focus(function(){
+						$(this).hide()
+					});
+				});
+			$('ul.nav').children('li.dropdown').keyup(	
+				function(){
+					$(this).siblings().children('ul').hide();
+				});
+			$('ul.nav li.dropdown li:last>a').focusout(
+			function(){
+				$('ul.nav li.dropdown ul').hide();
+			})
+		});
+	</script>
+	<script type="text/javascript">
+		$(function () {
+			$('.FAQ dd').hide();
+	    	$('.FAQ dd:first-of-type').show();
+	    	$('.FAQ dt:first-of-type').addClass("Answerclose");
+
+			$('.FAQ dt').click(function() {
+				$('.FAQ dd').slideUp();
+				$('.FAQ dt').removeClass("Answerclose");
+
+				$(this).next().slideDown();
+				$(this).addClass("Answerclose");
+				return false;
+			});
+		});
+	</script>
+
+	<!--fancy box-->
+	<script type="text/javascript" src="js/fancyBox/jquery.fancybox.js?v=2.1.5"></script>
+	<script type="text/javascript">
+		$(function(){
+		    /* Button helper. Disable animations, hide close button, change title type and content */
+		    $('.fancybox-buttons').fancybox({
+		        openEffect  : 'none',
+		        closeEffect : 'none',
+
+		        prevEffect : 'none',
+		        nextEffect : 'none',
+
+		        closeBtn  : false,
+
+		        helpers : {
+		            title : {
+		                type : 'inside'
+		            },
+		            buttons : {}
+		        },
+
+		        afterLoad : function() {
+		            this.title = 'Image ' + (this.index + 1) + ' of ' + this.group.length + (this.title ? ' - ' + this.title : '');
+		        }
+		    });
+		})
+	</script>
+</body>
+</html>
