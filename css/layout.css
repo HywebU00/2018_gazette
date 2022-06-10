@@ -264,7 +264,7 @@ a#gotocenter:focus{
 @media (min-width: 992px) and (max-width: 1199px) {}
 @media (min-width: 768px) and (max-width: 991px) {
 	.Search_Bar{ 
-		margin-top: 130px;
+		margin-top: 150px;
 		background: url(../images/basic/bg_Search_bar.jpg) repeat-x left bottom;
 	}
 }
@@ -372,6 +372,10 @@ input[type="datetime-local"].form-control,
 input[type="month"].form-control {
 	line-height: 20px;
 }
+
+
+.input-group-btn{ font-size: initial !important; }
+.input-group-btn button span+b{ font-size: 0; }
 
 /*////////////////////////////////////////////////////////////////////////////*/
 /*/////////////////////////////////  Header  /////////////////////////////////*/
@@ -2304,7 +2308,7 @@ figure.pic img{
 /*///////////////////////////////////*/
 .input-group-btn:last-child > .btn{
 	border-radius: 4px;
-	line-height: 1;
+	/*line-height: 1;*/
 }
 
 .Re_Search{
