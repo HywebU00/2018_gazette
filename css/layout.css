@@ -181,8 +181,10 @@ a#gotocenter {
     top: 0;
     line-height: 1.8;
 }
-a#gotocenter:focus{
-	color: #000;
+a#gotocenter:focus{ color: #000; }
+
+@media (max-width: 767px) {
+	.accesskey{ display: none; }
 }
 
 /*錯誤訊息*/
@@ -969,7 +971,7 @@ input[type="month"].form-control {
 }
 
 @media (max-width: 767px) {
-	.Latest_Issue{ margin-top: 65px; }
+	.Latest_Issue{ margin-top: 85px; }
 	.Latest_Issue .row{
 		border-radius: 5px;
 		height: auto;
@@ -1195,6 +1197,7 @@ input[type="month"].form-control {
 	.Preparatory{ 
 		padding-right: 15px;
 		padding-left: 15px; 
+		margin: 3em 0;
 	}
 	.Preparatory .Wrap .Chapter p{ font-size: 1.25em;}
 }
@@ -1335,7 +1338,7 @@ input[type="month"].form-control {
 }
 
 @media (max-width:767px){
-	.Tab{}
+	.Tab{ padding: 2em 0; }
 	.Tab .all{	height: 580px; }
 
 	.Tab .options{ position: relative; }
