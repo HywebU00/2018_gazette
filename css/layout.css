@@ -93,9 +93,74 @@ a.goCenter:focus{
     display: none;
     z-index: 99999999;
     text-indent: -999999px;
-    &:hover {
-        background: url(../images/basic/top.png) no-repeat center top rgba(0, 0, 0, 0.8);
-    }
+}
+.scrollToTop:hover{
+	background: url(../images/basic/top.png) no-repeat center top rgba(0, 0, 0, 0.8);	
+}
+
+/* 選項次層 */
+.sub_menu ol,
+.sub_menu ul {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	margin: 0;
+	padding: 1em 0;
+	list-style-type: none;
+}
+.sub_menu ol li,
+.sub_menu ul li{
+	flex: 0 0 auto;
+	flex-basis: calc(100% / 3 - 10px);
+	margin: 0 5px 12px;
+}
+@media (max-width: 991px){
+	.sub_menu ol li,
+	.sub_menu ul li{
+		flex-basis: calc(100% / 2 - 10px);
+	}
+}
+.sub_menu ol li a,
+.sub_menu ul li a{
+	color: #222;
+	text-decoration: none;
+	transition: .3s;
+}
+.sub_menu ol li a:hover,
+.sub_menu ol li a:focus,
+.sub_menu ul li a:hover,
+.sub_menu ul li a:focus{
+	background: #103155;
+	color: #fff !important;
+}
+
+.sub_menu ul li a,
+.sub_menu ol li a{
+	border-radius: 4px;
+	border: 2px solid #DDD;
+	padding: 1em 1em 1em 2.5em;
+	display: block;
+	vertical-align: top;
+	position: relative;
+	height: 100%;  
+	box-sizing: border-box;
+}
+.sub_menu ul li a:hover,
+.sub_menu ul li a:focus{
+	border: 2px solid #2175ca;
+	color: #fff;
+}
+.sub_menu ul li a .num,
+.sub_menu ol li a .num{
+	position: absolute;
+	width: 1em;
+	top: 1em;
+	left: .5em;
+	text-align: right;
+}
+.sub_menu ul li a .num:after ,
+.sub_menu ol li a .num:after {
+	content: ".";
 }
 
 a:focus,
@@ -2261,7 +2326,7 @@ input[type="month"].form-control {
 	letter-spacing: 2px;
 	/*margin-top: 20px;
 	margin-bottom: 40px;*/
-	margin-top: 0px;
+	margin-top: 10px;
 	margin-bottom: 20px;
 	padding: 0 15px;
 	color: #424242;
@@ -2273,7 +2338,7 @@ input[type="month"].form-control {
 	.PageTitle{
 		font-size: 2.2em;
 		letter-spacing: 5px;
-		margin-top: 50px;
+		margin-top: 80px;
 		margin-bottom: 15px;
 	}
 }
