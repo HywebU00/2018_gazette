@@ -123,6 +123,8 @@ a.goCenter:focus{
 .sub_menu ol li a,
 .sub_menu ul li a{
 	color: #222;
+	background: rgba(228,228,230,1);
+	font-size: 1.125em;
 	text-decoration: none;
 	transition: .3s;
 }
@@ -138,29 +140,34 @@ a.goCenter:focus{
 .sub_menu ol li a{
 	border-radius: 4px;
 	border: 2px solid #DDD;
-	padding: 1em 1em 1em 2.5em;
+	padding: 10px 15px 10px 48px;
 	display: block;
-	vertical-align: top;
 	position: relative;
 	height: 100%;  
 	box-sizing: border-box;
+	position: relative;
 }
+.sub_menu ul li a i,
+.sub_menu ol li a i{
+	position: absolute;
+	left: 12px;
+	border-radius: 50%;
+	width: 25px;
+	height: 25px;
+	line-height: inherit;
+	color: #fff;
+	background: rgba(130,130,140,1);
+}
+
 .sub_menu ul li a:hover,
 .sub_menu ul li a:focus{
 	border: 2px solid #2175ca;
 	color: #fff;
 }
-.sub_menu ul li a .num,
-.sub_menu ol li a .num{
-	position: absolute;
-	width: 1em;
-	top: 1em;
-	left: .5em;
-	text-align: right;
-}
-.sub_menu ul li a .num:after ,
-.sub_menu ol li a .num:after {
-	content: ".";
+.sub_menu ul li a:hover i,
+.sub_menu ul li a:focus i{
+	background: #fff;
+  color: #103155;
 }
 
 a:focus,
@@ -3371,13 +3378,15 @@ figure.pic img{
 .NP .Items a{ 
 	display:block;
 	color:rgba(0,0,0,.75);
-	padding:10px 15px;
+	padding: 10px 15px 10px 48px;
 	background:rgba(228,228,230,1);
 	font-size: 1.125em;
 	border-radius:5px;
 	/*border: solid 1px rgba(16,49,85,1);*/
 	text-decoration: none;
 	min-height: 72px;/*文字第二行時，會有後項跟屁股的情況*/
+	border: 2px solid #DDD;
+	position: relative;
 }
 
 .NP .Items a:hover{
@@ -3388,12 +3397,14 @@ figure.pic img{
 
 .NP .Items a i{
 	border-radius:50%;
-	width:30px;
-	height:30px;
+	width:25px;
+	height:25px;
 	line-height:inherit;
 	color:#fff; 
 	background:rgba(130,130,140,1);
 	margin-right:8px;
+	position: absolute;
+	left: 12px;
 }
 .NP .Items a:hover i{
 	background:#fff;
